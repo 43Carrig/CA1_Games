@@ -43,4 +43,9 @@ public class Manipulate : MonoBehaviour
     {
         rend.material.color = defColour;
     }
+
+    public void rotate(float rotation)
+    {
+        transform.Rotate(Camera.main.transform.forward, rotation);
+    }
 }

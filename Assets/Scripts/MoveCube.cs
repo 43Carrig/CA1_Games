@@ -8,7 +8,7 @@ public class MoveCube : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private Direction dir;
-
+    
     private void OnMouseDown()
     {
         Vector3 pos = target.position;
