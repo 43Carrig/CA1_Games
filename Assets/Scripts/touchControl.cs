@@ -22,8 +22,11 @@ public class TouchControl : MonoBehaviour
         // Track a single touch as a direction control
         if (Input.touchCount > 0)
         {
+            // Input.touches - Returns list of objects representing status of all touches during last frame.
+            // Each entry represents a status of a finger touching the screen.
             Touch theTouch = Input.touches[0];
 
+            // Ray - A ray is an infinite line starting at origin and going in some direction
             Ray laser = Camera.main.ScreenPointToRay(theTouch.position);
 
 
@@ -36,6 +39,7 @@ public class TouchControl : MonoBehaviour
                     //When a touch has first been detected, record the starting position
                     case TouchPhase.Began:
 
+                        // Used to get information back from a raycast
                         RaycastHit info;
                         possibleTap = true;
 
@@ -62,7 +66,7 @@ public class TouchControl : MonoBehaviour
                         }
                         else
                         {
-                            //Drag Camera Postion (Not chaning field of view)
+                            //Drag Camera Position (Not changing field of view)
                             Vector2 touchDeltaPosition = Input.touches[0].deltaPosition;
                             Camera.main.transform.Translate(-touchDeltaPosition.x * 0.005f,
                                 -touchDeltaPosition.y * 0.001f, 0);
@@ -113,14 +117,18 @@ public class TouchControl : MonoBehaviour
                     Camera.main.fieldOfView += (currentPinchDistance - initialPinchDistance) * 0.005f;
                 
                 // Taken from class whiteboard
-                var currentTheta = Mathf.Atan(
-                    Input.touches[0].position.y - Input.touches[1].position.y /
+                // Mathf.Atan - Returns the arc-tangent of f - the angle in radians whose tangent is f. 
+                // https://gamedev.stackexchange.com/questions/14602/what-are-atan-and-atan2-used-for-in-games
+                // atan(angle) = opposite/adjacent
+                var currentTheta = Mathf.Atan2(
+                    Input.touches[0].position.y - Input.touches[1].position.y, 
                         Input.touches[0].position.x - Input.touches[1].position.x);
 
                 if (currentlySelectedObject != null)
                 {
                     // Object rotation 
-                    currentlySelectedObject.rotate((currentTheta - pastTheta) * Mathf.Rad2Deg * -100);
+                    // Mathf.Rad2Deg - Radians-to-degrees conversion
+                    currentlySelectedObject.rotate((currentTheta - pastTheta) * Mathf.Rad2Deg);
                 }
                 else
                 {

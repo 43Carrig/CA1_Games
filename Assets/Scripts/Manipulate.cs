@@ -36,7 +36,9 @@ public class Manipulate : MonoBehaviour
 
     public void scale(float scaleBy)
     {
-        transform.localScale = scaleBy * Vector3.one;
+        
+        
+        transform.localScale = Mathf.Clamp(scaleBy, 0,5)* Vector3.one;
     }
 
     public void unTap()
