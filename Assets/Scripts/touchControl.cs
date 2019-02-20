@@ -143,6 +143,18 @@ public class TouchControl : MonoBehaviour
                     initialPinchDistance = -1;
                 }
             }
+
+            if (Input.touchCount == 4)
+            {
+                // https://answers.unity.com/questions/899037/applicationquit-not-working-1.html
+                #if UNITY_EDITOR
+                                // Application.Quit() does not work in the editor so
+                                // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+                                UnityEditor.EditorApplication.isPlaying = false;
+                #else
+                         Application.Quit();
+                #endif
+            }
         }
     }
     
