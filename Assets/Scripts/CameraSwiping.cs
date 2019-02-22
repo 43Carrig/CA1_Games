@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Not working
-
-// TODO - https://www.youtube.com/watch?v=0ee_Mjzb3Jk&list=PLLH3mUGkfFCWCsGUfwLMnDWdkpQuqW3xa&index=11
-// Ball Boost - https://www.youtube.com/watch?v=1nwv59cQ4po&list=PLLH3mUGkfFCWCsGUfwLMnDWdkpQuqW3xa&index=13
+// https://www.youtube.com/watch?v=0ee_Mjzb3Jk&list=PLLH3mUGkfFCWCsGUfwLMnDWdkpQuqW3xa&index=11
 
 public class CameraSwiping : MonoBehaviour
 {

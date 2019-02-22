@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.47569007, g: 0.5207554, b: 0.562064, a: 1}
+  m_IndirectSpecularColor: {r: 0.47568226, g: 0.52073306, b: 0.56211895, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492123378}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fec79312d6f4a3b4ab32e2d8013e2948, type: 3}
   m_Name: 
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82f50acffeec5824a85ef898eddee692, type: 3}
   m_Name: 
@@ -773,12 +773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db101999bb256504984acdaa030370d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSelectedObject: {fileID: 0}
-  currentlySelectedObject: {fileID: 0}
-  dragDistance: 0
-  possibleTap: 0
-  initialPinchDistance: -1
-  pastTheta: 0
 --- !u!1 &548186831
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Gyroscope reference tutorial: https://www.youtube.com/watch?v=P5JxTfCAOXo
-// Works - https://www.youtube.com/watch?v=P5JxTfCAOXo&t=11s
+// Gyroscope reference tutorial: https://www.youtube.com/watch?v=P5JxTfCAOXo
+// https://www.youtube.com/watch?v=P5JxTfCAOXo&t=11s
 
 public class GyroscopeControl : MonoBehaviour
 {
